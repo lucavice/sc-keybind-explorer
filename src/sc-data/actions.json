@@ -1714,117 +1714,161 @@
     "description": ""
   },
   {
-    "id": "v_speed_range_up",
-    "action": "Speed Limiter - Increase",
+    "id": "v_ifcs_speed_limiter_up",
+    "action": "Speed Limiter - Increase (hold)",
     "keyboard": null,
     "mouse": null,
     "gamepad": null,
     "joystick": null,
     "category": "Flight - Movement",
-    "description": "Speed Limiter Increase"
+    "description": "Speed Limiter - Increase (hold)"
   },
   {
-    "id": "v_speed_range_down",
-    "action": "Speed Limiter - Decrease",
+    "id": "v_ifcs_speed_limiter_down",
+    "action": "Speed Limiter - Decrease (hold)",
     "keyboard": null,
     "mouse": null,
     "gamepad": null,
     "joystick": null,
     "category": "Flight - Movement",
-    "description": "Speed Limiter Decrease"
+    "description": "Speed Limiter - Decrease (hold)"
   },
   {
-    "id": "v_speed_range_rel",
-    "action": "Speed Limiter (Rel.)",
-    "keyboard": "LALT + MAXIS Z",
+    "id": "v_ifcs_speed_limiter_increment",
+    "action": "Speed Limiter - Step Up (tap)",
+    "keyboard": "LALT + MWHEEL UP",
     "mouse": null,
     "gamepad": null,
     "joystick": null,
     "category": "Flight - Movement",
-    "description": "Speed Limiter (Rel.)"
+    "activationMode": "PRESS",
+    "description": "Speed Limiter - Step Up (tap)"
   },
   {
-    "id": "v_speed_range_abs",
-    "action": "Speed Limiter (Abs.)",
+    "id": "v_ifcs_speed_limiter_decrement",
+    "action": "Speed Limiter - Step Down (tap)",
+    "keyboard": "LALT + MWHEEL DOWN",
+    "mouse": null,
+    "gamepad": null,
+    "joystick": null,
+    "category": "Flight - Movement",
+    "activationMode": "PRESS",
+    "description": "Speed Limiter - Step Down (tap)"
+  },
+  {
+    "id": "v_ifcs_speed_limiter_rel",
+    "action": "Speed Limiter (rel)",
     "keyboard": null,
     "mouse": null,
     "gamepad": null,
     "joystick": null,
     "category": "Flight - Movement",
-    "description": "Speed Limiter (Abs.)"
+    "description": "Speed Limiter (rel)"
   },
   {
-    "id": "v_ifcs_toggle_speed_limiter",
-    "action": "Speed Limiter - On/Off (Hold / Toggle)",
+    "id": "v_ifcs_speed_limiter_abs",
+    "action": "Speed Limiter (abs)",
     "keyboard": null,
     "mouse": null,
     "gamepad": null,
     "joystick": null,
     "category": "Flight - Movement",
-    "activationMode": "SMART TOGGLE",
-    "description": "Toggles Speed Limiter on and off"
+    "description": "Speed Limiter (abs)"
   },
   {
-    "id": "v_ifcs_speed_limiter_reset_scm",
-    "action": "Speed Limiter - Reset to SCM",
+    "id": "v_ifcs_speed_limiter_toggle",
+    "action": "Speed Limiter - Enable / Disable",
+    "keyboard": null,
+    "mouse": null,
+    "gamepad": null,
+    "joystick": null,
+    "category": "Flight - Movement",
+    "activationMode": "TAP",
+    "description": "Speed Limiter - Enable / Disable"
+  },
+  {
+    "id": "v_ifcs_speed_limiter_on",
+    "action": "Speed Limiter - Enable",
     "keyboard": null,
     "mouse": null,
     "gamepad": null,
     "joystick": null,
     "category": "Flight - Movement",
     "activationMode": "PRESS",
-    "description": "Resets Speed Limiter to full SCM."
+    "description": "Speed Limiter - Enable"
+  },
+  {
+    "id": "v_ifcs_speed_limiter_off",
+    "action": "Speed Limiter - Disable",
+    "keyboard": null,
+    "mouse": null,
+    "gamepad": null,
+    "joystick": null,
+    "category": "Flight - Movement",
+    "activationMode": "PRESS",
+    "description": "Speed Limiter - Disable"
   },
   {
     "id": "v_accel_range_up",
-    "action": "Acceleration Limiter Increase",
+    "action": "Acceleration Limiter - Increase (hold)",
     "keyboard": null,
     "mouse": null,
     "gamepad": null,
     "joystick": null,
     "category": "Flight - Movement",
-    "description": "Acceleration Limiter Increase"
+    "description": "Acceleration Limiter - Increase (hold)"
   },
   {
     "id": "v_accel_range_down",
-    "action": "Acceleration Limiter Decrease",
+    "action": "Acceleration Limiter - Decrease (hold)",
     "keyboard": null,
     "mouse": null,
     "gamepad": null,
     "joystick": null,
     "category": "Flight - Movement",
-    "description": "Acceleration Limiter Decrease"
+    "description": "Acceleration Limiter - Decrease (hold)"
   },
   {
-    "id": "v_accel_range_rel",
-    "action": "Acceleration Limiter Up / Down (rel.)",
-    "keyboard": "RALT + MAXIS Z",
-    "mouse": null,
-    "gamepad": null,
-    "joystick": null,
-    "category": "Flight - Movement",
-    "description": "Acceleration Limiter Up / Down (rel.) - Decreases / increases acceleration limiter relative to old value"
-  },
-  {
-    "id": "v_accel_range_abs",
-    "action": "Acceleration Limiter Up / Down (abs.)",
-    "keyboard": null,
-    "mouse": null,
-    "gamepad": null,
-    "joystick": null,
-    "category": "Flight - Movement",
-    "description": "Acceleration Limiter Up / Down (abs.) - Decreases / increases acceleration limiter."
-  },
-  {
-    "id": "v_target_match_vel",
-    "action": "Match target velocity",
-    "keyboard": null,
+    "id": "v_accel_range_increment",
+    "action": "Acceleration Limiter - Step Up (tap)",
+    "keyboard": "RALT + MWHEEL UP",
     "mouse": null,
     "gamepad": null,
     "joystick": null,
     "category": "Flight - Movement",
     "activationMode": "PRESS",
-    "description": ""
+    "description": "Acceleration Limiter - Step Up (tap)"
+  },
+  {
+    "id": "v_accel_range_decrement",
+    "action": "Acceleration Limiter - Step Down (tap)",
+    "keyboard": "RALT + MWHEEL DOWN",
+    "mouse": null,
+    "gamepad": null,
+    "joystick": null,
+    "category": "Flight - Movement",
+    "activationMode": "PRESS",
+    "description": "Acceleration Limiter - Step Down (tap)"
+  },
+  {
+    "id": "v_accel_range_rel",
+    "action": "Acceleration Limiter (rel)",
+    "keyboard": null,
+    "mouse": null,
+    "gamepad": null,
+    "joystick": null,
+    "category": "Flight - Movement",
+    "description": "Acceleration Limiter (rel)"
+  },
+  {
+    "id": "v_accel_range_abs",
+    "action": "Acceleration Limiter (abs)",
+    "keyboard": null,
+    "mouse": null,
+    "gamepad": null,
+    "joystick": null,
+    "category": "Flight - Movement",
+    "description": "Acceleration Limiter (abs)"
   },
   {
     "id": "v_space_brake",
@@ -2176,6 +2220,39 @@
     "category": "Flight - Movement",
     "activationMode": "TAP",
     "description": "Resets the max endured Gs for the accelerometer."
+  },
+  {
+    "id": "v_flight_advanced_hud_toggle",
+    "action": "Advanced HUD - Toggle",
+    "keyboard": null,
+    "mouse": null,
+    "gamepad": null,
+    "joystick": null,
+    "category": "Flight - Movement",
+    "activationMode": "TAP",
+    "description": "Advanced HUD - Toggle"
+  },
+  {
+    "id": "v_flight_advanced_hud_on",
+    "action": "Advanced HUD - Enable",
+    "keyboard": null,
+    "mouse": null,
+    "gamepad": null,
+    "joystick": null,
+    "category": "Flight - Movement",
+    "activationMode": "PRESS",
+    "description": "Advanced HUD - Enable"
+  },
+  {
+    "id": "v_flight_advanced_hud_off",
+    "action": "Advanced HUD - Disable",
+    "keyboard": null,
+    "mouse": null,
+    "gamepad": null,
+    "joystick": null,
+    "category": "Flight - Movement",
+    "activationMode": "PRESS",
+    "description": "Advanced HUD - Disable"
   },
   {
     "id": "v_toggle_docking_mode",
@@ -2936,6 +3013,17 @@
     "description": "Activate a Mining Module"
   },
   {
+    "id": "v_mining_use_permanent_modifier",
+    "action": "Activate Mining Module (Slot 1)",
+    "keyboard": "LALT + 4",
+    "mouse": null,
+    "gamepad": null,
+    "joystick": null,
+    "category": "Vehicles - Mining",
+    "activationMode": "PRESS",
+    "description": "Activate a Mining Module"
+  },
+  {
     "id": "v_jettison_volatile_cargo",
     "action": "Jettison Cargo",
     "keyboard": "LALT + J",
@@ -3554,7 +3642,7 @@
   {
     "id": "v_weapon_manual_gimbal_cycle_source",
     "action": "Manual Gimbal Mode - Swap VJoy / Look Direction (Toggle, Hold)",
-    "keyboard": "LALT + G",
+    "keyboard": null,
     "mouse": null,
     "gamepad": null,
     "joystick": null,
@@ -4953,7 +5041,29 @@
     "action": "Headlights (Toggle)",
     "keyboard": "L",
     "mouse": null,
-    "gamepad": "SHOULDERL + DPAD DOWN",
+    "gamepad": null,
+    "joystick": null,
+    "category": "Lights",
+    "activationMode": "PRESS",
+    "description": ""
+  },
+  {
+    "id": "v_lights_on",
+    "action": "Headlights\\n(Enable)",
+    "keyboard": null,
+    "mouse": null,
+    "gamepad": null,
+    "joystick": null,
+    "category": "Lights",
+    "activationMode": "PRESS",
+    "description": ""
+  },
+  {
+    "id": "v_lights_off",
+    "action": "Headlights\\n(Enable)",
+    "keyboard": null,
+    "mouse": null,
+    "gamepad": null,
     "joystick": null,
     "category": "Lights",
     "activationMode": "PRESS",
@@ -5402,6 +5512,26 @@
     "joystick": null,
     "category": "On Foot - All",
     "activationMode": "PRESS",
+    "description": ""
+  },
+  {
+    "id": "jump_hold",
+    "action": "Ui Cifps Move Jump Hold",
+    "keyboard": "SPACE",
+    "mouse": null,
+    "gamepad": null,
+    "joystick": null,
+    "category": "On Foot - All",
+    "description": ""
+  },
+  {
+    "id": "jump_release",
+    "action": "Ui Cifps Move Jump Release",
+    "keyboard": "SPACE",
+    "mouse": null,
+    "gamepad": null,
+    "joystick": null,
+    "category": "On Foot - All",
     "description": ""
   },
   {
@@ -7018,8 +7148,8 @@
     "description": ""
   },
   {
-    "id": "mapui_action_transition",
-    "action": "Mapui Action Transition",
+    "id": "mapui_action_goto_localmap",
+    "action": "Mapui Action Goto Localmap",
     "keyboard": "1",
     "mouse": null,
     "gamepad": null,
