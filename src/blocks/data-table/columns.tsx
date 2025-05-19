@@ -13,7 +13,10 @@ export type DataColumn = {
   gamepad: any;
   activationMode?: string;
   description?: string;
-  rebinded?: boolean;
+  rebindedKeyboard?: boolean;
+  rebindedMouse?: boolean;
+  rebindedJoystick?: boolean;
+  rebindedGamepad?: boolean;
 };
 
 const renderCell = (
@@ -46,7 +49,7 @@ export const columns: ColumnDef<DataColumn>[] = [
     cell: ({ row }) =>
       renderCell(
         row.original.keyboard,
-        row.original.rebinded,
+        row.original.rebindedKeyboard,
         row.original.keyboard ? row.original.activationMode : undefined
       ),
   },
@@ -54,19 +57,19 @@ export const columns: ColumnDef<DataColumn>[] = [
     accessorKey: "mouse",
     header: "Mouse",
     cell: ({ row }) =>
-      renderSimpleCell(row.original.mouse, row.original.rebinded),
+      renderSimpleCell(row.original.mouse, row.original.rebindedMouse),
   },
   {
     accessorKey: "joystick",
     header: "Joystick",
     cell: ({ row }) =>
-      renderSimpleCell(row.original.joystick, row.original.rebinded),
+      renderSimpleCell(row.original.joystick, row.original.rebindedJoystick),
   },
   {
     accessorKey: "gamepad",
     header: "Gamepad",
     cell: ({ row }) =>
-      renderSimpleCell(row.original.gamepad, row.original.rebinded),
+      renderSimpleCell(row.original.gamepad, row.original.rebindedGamepad),
   },
   {
     accessorKey: "description",

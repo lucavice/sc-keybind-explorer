@@ -68,25 +68,31 @@ const ProfileParser = (props: any) => {
       am.action.forEach((a) => {
         var keybind = keybinds.find((k) => k.id == a.$.name);
         if (keybind != null) {
+          let removedKeyBind = false;
+          let unbindedKey = "";
           let newKeybind = changeCase
             .capitalCase(a.rebind[0].$.input)
             .toLocaleUpperCase();
 
-          if (newKeybind.split(" ").length <= 1) return;
-
-          keybind.rebinded = true;
+          if (newKeybind.split(" ").length <= 1) {
+            removedKeyBind = true;
+          }
 
           if (newKeybind.startsWith("JS")) {
-            keybind.joystick = newKeybind;
+            keybind.joystick = removedKeyBind ? unbindedKey : newKeybind;
+            keybind.rebindedJoystick = true;
           }
           if (newKeybind.startsWith("KB")) {
-            keybind.keyboard = newKeybind;
+            keybind.keyboard = removedKeyBind ? unbindedKey : newKeybind;
+            keybind.rebindedKeyboard = true;
           }
           if (newKeybind.startsWith("MS")) {
-            keybind.mouse = newKeybind;
+            keybind.mouse = removedKeyBind ? unbindedKey : newKeybind;
+            keybind.rebindedMouse = true;
           }
           if (newKeybind.startsWith("GP")) {
-            keybind.gamepad = newKeybind;
+            keybind.gamepad = removedKeyBind ? unbindedKey : newKeybind;
+            keybind.rebindedGamepad = true;
           }
         }
       });

@@ -4,8 +4,8 @@ import * as changeCase from "change-case";
 import * as ini from "ini";
 
 const inputFilePath = "./defaultProfile.xml";
-const outputFilePath = "./actions.json";
-const iniFilePath = "./global.ini";
+const outputFilePath = "./actions.it.json";
+const iniFilePath = "./global.it.ini";
 
 // Step 1. Parse XML Star Citizen Default Profile
 var data = await parseXMLFile(inputFilePath);
@@ -125,7 +125,20 @@ function getLocalizationData() {
     const fileContent = fs.readFileSync(iniFilePath, "utf-8");
 
     // Parse the INI content into a plain JavaScript object
-    return ini.parse(fileContent);
+    var localizationData = ini.parse(fileContent);
+
+    const transformedData = {};
+    for (const oldKey in localizationData) {
+      if (Object.prototype.hasOwnProperty.call(localizationData, oldKey)) {
+        const newKey = oldKey.replace(",P", "");
+        transformedData[newKey] = localizationData[oldKey];
+      }
+    }
+
+    // Return the object with transformed top-level keys
+    return transformedData;
+
+    return localizationData;
   } catch (error) {
     console.error("Error reading or parsing the INI file:", error);
   }

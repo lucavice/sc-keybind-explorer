@@ -1,12 +1,38 @@
 import { DataColumn, columns } from "../blocks/data-table/columns";
 import { DataTable } from "../blocks/data-table/data-table";
+import { useMemo } from "react"; // Import useMemo hook
 
-import actions from "../sc-data/actions.json";
+import actionsEn from "../sc-data/actions.en.json";
+import actionsIt from "../sc-data/actions.it.json";
+
 import versionInfo from "../version";
 
-var dataActions: DataColumn[] = actions;
+// Remove the global var declaration, dataActions will be determined inside the component
 
 export default function MainPage() {
+  // Determine the language and load the corresponding data using useMemo
+  // This ensures the data selection logic runs only once on mount
+  const dataActions = useMemo(() => {
+    // Access the query string from the browser's location object
+    const search = window.location.search;
+
+    // Use URLSearchParams to easily parse the query string
+    const params = new URLSearchParams(search);
+
+    // Get the value of the 'lang' parameter
+    const lang = params.get("lang");
+
+    // Return the appropriate actions data based on the lang parameter
+    if (lang === "it") {
+      console.log("Loading Italian actions..."); // Optional: for debugging
+      return actionsIt;
+    } else {
+      // Default to English if lang is not 'it', is empty, or is missing
+      console.log("Loading English actions (default)..."); // Optional: for debugging
+      return actionsEn;
+    }
+  }, []); // Empty dependency array means this memoized value is calculated only once
+
   return (
     <div className="container mx-auto m-4">
       <div className="flex justify-between">
@@ -34,9 +60,13 @@ export default function MainPage() {
               alt="GitHub Logo"
             ></img>
           </a>
+          <div className="pl-2">
+            <a href="/">EN</a> | <a href="/?lang=it">IT</a>
+          </div>
         </div>
       </div>
 
+      {/* Pass the dynamically selected dataActions to the DataTable */}
       <DataTable columns={columns} inputData={dataActions} />
     </div>
   );
