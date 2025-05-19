@@ -1,4 +1,4 @@
-import { DataColumn, columns } from "../blocks/data-table/columns";
+import { columns } from "../blocks/data-table/columns";
 import { DataTable } from "../blocks/data-table/data-table";
 import { useMemo } from "react"; // Import useMemo hook
 
